@@ -1,0 +1,5 @@
+-- COUNT - Retorna a quantidade de registros
+-- SUM - Retorna a soma dos registros
+-- MAX - Retorna o maior valor dos registros
+-- MIN - Retornar o menor valor dos registros
+-- AVG - Retorna a média dos registros
