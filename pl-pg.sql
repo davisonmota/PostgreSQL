@@ -143,6 +143,14 @@ CREATE OR REPLACE FUNCTION instrucor_com_salario(OUT nome VARCHAR, OUT salario_o
 			salario_ok := instrutor.salario;
 			RETURN NEXT;
 		END LOOP;
+		EXCEPTION
+			--especifica o error, tem todos na documentação
+			RAISE NOTICE 'Algo errado'; -- RAISE ERRORS and MESSAGES
+			WHEN undefined_colum THEN
+				-- instruçao caso error aconteça
+			WHEN outro_erro THEN
+				-- tratamentos diferante para cada error
+	
 	END;
 $$ LANGUAGE plpgsql;
 
